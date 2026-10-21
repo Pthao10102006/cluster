@@ -1,0 +1,1676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Customer Clustering Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 24px auto; max-width: 1200px; padding: 0 16px; color: #222; }
+        h1, h2 { color: #17365d; }
+        section { border-top: 1px solid #ddd; margin-top: 32px; padding-top: 16px; }
+        .data-table { border-collapse: collapse; width: 100%; margin: 16px 0; }
+        .data-table th, .data-table td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        .data-table th { background: #f2f5f9; }
+        .data-table tr:nth-child(even) { background: #fafafa; }
+    </style>
+</head>
+<body>
+    <h1>Customer Clustering Report</h1>
+    <p>Age groups: Youth (age <= 35), Middle-aged (36-45), Older (age > 45).</p>
+    <div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.1.1.min.js" integrity="sha256-HUEFyfiTnZJxCxur99FjbKYTvKSzwDaD3/x5TqHpFu4=" crossorigin="anonymous"></script>                <div id="2759935b-2c4e-4625-bb2d-ecabaf165691" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("2759935b-2c4e-4625-bb2d-ecabaf165691")) {                    Plotly.newPlot(                        "2759935b-2c4e-4625-bb2d-ecabaf165691",                        [{"domain":{"x":[0.0,1.0],"y":[0.0,1.0]},"hole":0.35,"hovertemplate":"Cluster %{label}\u003cbr\u003eCustomers: %{value}\u003cbr\u003eShare: %{percent}\u003cextra\u003e\u003c\u002fextra\u003e","labels":{"dtype":"i1","bdata":"AAECAw=="},"legendgroup":"","name":"","showlegend":true,"values":{"dtype":"i1","bdata":"MDkwLw=="},"type":"pie","textinfo":"label+percent"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"legend":{"tracegroupgap":0},"title":{"text":"Customer Distribution by Cluster"}},                        {"responsive": true}                    )                };            </script>        </div><div>                            <div id="f0e88266-86a0-4a33-9ef5-44a76352adf9" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("f0e88266-86a0-4a33-9ef5-44a76352adf9")) {                    Plotly.newPlot(                        "f0e88266-86a0-4a33-9ef5-44a76352adf9",                        [{"customdata":{"dtype":"i1","bdata":"AAMt","shape":"3, 1"},"hovertemplate":"Age Group=%{x}\u003cbr\u003eAverage Annual Income=%{y:.2f}\u003cbr\u003eCustomer_Count=%{customdata[0]}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","pattern":{"shape":""}},"name":"","orientation":"v","showlegend":false,"textposition":"auto","x":["Youth (\u003c=35)","Middle-aged (36-45)","Older (\u003e45)"],"xaxis":"x","y":{"dtype":"f8","bdata":"AAAAAAAA+H9VVVVVVdVMQJ\u002f0SZ\u002f0SUtA"},"yaxis":"y","type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Age Group"},"categoryorder":"array","categoryarray":["Youth (\u003c=35)","Middle-aged (36-45)","Older (\u003e45)"]},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Average Annual Income"}},"legend":{"tracegroupgap":0},"title":{"text":"Cluster 0: Average Annual Income by Age Group"},"barmode":"relative"},                        {"responsive": true}                    )                };            </script>        </div><div>                            <div id="46a57f2b-2b15-49ce-8781-0205876a5ecb" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("46a57f2b-2b15-49ce-8781-0205876a5ecb")) {                    Plotly.newPlot(                        "46a57f2b-2b15-49ce-8781-0205876a5ecb",                        [{"customdata":{"dtype":"i1","bdata":"AAMt","shape":"3, 1"},"hovertemplate":"Age Group=%{x}\u003cbr\u003eAverage Spending Score=%{y:.2f}\u003cbr\u003eCustomer_Count=%{customdata[0]}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","pattern":{"shape":""}},"name":"","orientation":"v","showlegend":false,"textposition":"auto","x":["Youth (\u003c=35)","Middle-aged (36-45)","Older (\u003e45)"],"xaxis":"x","y":{"dtype":"f8","bdata":"AAAAAAAA+H8AAAAAAABHQAZbsAVbMEhA"},"yaxis":"y","type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Age Group"},"categoryorder":"array","categoryarray":["Youth (\u003c=35)","Middle-aged (36-45)","Older (\u003e45)"]},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Average Spending Score"}},"legend":{"tracegroupgap":0},"title":{"text":"Cluster 0: Average Spending Score by Age Group"},"barmode":"relative"},                        {"responsive": true}                    )                };            </script>        </div><div>                            <div id="dfdde315-f5b7-4201-8bdb-6bd428d96ae6" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("dfdde315-f5b7-4201-8bdb-6bd428d96ae6")) {                    Plotly.newPlot(                        "dfdde315-f5b7-4201-8bdb-6bd428d96ae6",                        [{"customdata":{"dtype":"i1","bdata":"LwoA","shape":"3, 1"},"hovertemplate":"Age Group=%{x}\u003cbr\u003eAverage Annual Income=%{y:.2f}\u003cbr\u003eCustomer_Count=%{customdata[0]}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","pattern":{"shape":""}},"name":"","orientation":"v","showlegend":false,"textposition":"auto","x":["Youth (\u003c=35)","Middle-aged (36-45)","Older (\u003e45)"],"xaxis":"x","y":{"dtype":"f8","bdata":"9Z2N+s5GT0BmZmZmZqZUQAAAAAAAAPh\u002f"},"yaxis":"y","type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Age Group"},"categoryorder":"array","categoryarray":["Youth (\u003c=35)","Middle-aged (36-45)","Older (\u003e45)"]},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Average Annual Income"}},"legend":{"tracegroupgap":0},"title":{"text":"Cluster 1: Average Annual Income by Age Group"},"barmode":"relative"},                        {"responsive": true}                    )                };            </script>        </div><div>                            <div id="507cfde5-5899-4f19-931a-d44d44e2e8a1" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("507cfde5-5899-4f19-931a-d44d44e2e8a1")) {                    Plotly.newPlot(                        "507cfde5-5899-4f19-931a-d44d44e2e8a1",                        [{"customdata":{"dtype":"i1","bdata":"LwoA","shape":"3, 1"},"hovertemplate":"Age Group=%{x}\u003cbr\u003eAverage Spending Score=%{y:.2f}\u003cbr\u003eCustomer_Count=%{customdata[0]}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","pattern":{"shape":""}},"name":"","orientation":"v","showlegend":false,"textposition":"auto","x":["Youth (\u003c=35)","Middle-aged (36-45)","Older (\u003e45)"],"xaxis":"x","y":{"dtype":"f8","bdata":"bdR3Nup7VEAzMzMzMxNVQAAAAAAAAPh\u002f"},"yaxis":"y","type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Age Group"},"categoryorder":"array","categoryarray":["Youth (\u003c=35)","Middle-aged (36-45)","Older (\u003e45)"]},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Average Spending Score"}},"legend":{"tracegroupgap":0},"title":{"text":"Cluster 1: Average Spending Score by Age Group"},"barmode":"relative"},                        {"responsive": true}                    )                };            </script>        </div><div>                            <div id="f68d7635-2354-426a-83d5-464f68f0a971" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("f68d7635-2354-426a-83d5-464f68f0a971")) {                    Plotly.newPlot(                        "f68d7635-2354-426a-83d5-464f68f0a971",                        [{"customdata":{"dtype":"i1","bdata":"CxAV","shape":"3, 1"},"hovertemplate":"Age Group=%{x}\u003cbr\u003eAverage Annual Income=%{y:.2f}\u003cbr\u003eCustomer_Count=%{customdata[0]}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","pattern":{"shape":""}},"name":"","orientation":"v","showlegend":false,"textposition":"auto","x":["Youth (\u003c=35)","Middle-aged (36-45)","Older (\u003e45)"],"xaxis":"x","y":{"dtype":"f8","bdata":"RhdddNFFU0AAAAAAAKBRQD3P8zzPc01A"},"yaxis":"y","type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Age Group"},"categoryorder":"array","categoryarray":["Youth (\u003c=35)","Middle-aged (36-45)","Older (\u003e45)"]},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Average Annual Income"}},"legend":{"tracegroupgap":0},"title":{"text":"Cluster 2: Average Annual Income by Age Group"},"barmode":"relative"},                        {"responsive": true}                    )                };            </script>        </div><div>                            <div id="2005c5da-d642-4c45-a811-626568eda1a5" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("2005c5da-d642-4c45-a811-626568eda1a5")) {                    Plotly.newPlot(                        "2005c5da-d642-4c45-a811-626568eda1a5",                        [{"customdata":{"dtype":"i1","bdata":"CxAV","shape":"3, 1"},"hovertemplate":"Age Group=%{x}\u003cbr\u003eAverage Spending Score=%{y:.2f}\u003cbr\u003eCustomer_Count=%{customdata[0]}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","pattern":{"shape":""}},"name":"","orientation":"v","showlegend":false,"textposition":"auto","x":["Youth (\u003c=35)","Middle-aged (36-45)","Older (\u003e45)"],"xaxis":"x","y":{"dtype":"f8","bdata":"F1100UUXJUAAAAAAAHAzQAAAAAAAACxA"},"yaxis":"y","type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Age Group"},"categoryorder":"array","categoryarray":["Youth (\u003c=35)","Middle-aged (36-45)","Older (\u003e45)"]},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Average Spending Score"}},"legend":{"tracegroupgap":0},"title":{"text":"Cluster 2: Average Spending Score by Age Group"},"barmode":"relative"},                        {"responsive": true}                    )                };            </script>        </div><div>                            <div id="ca947428-075a-4d63-a707-f44da0cbe871" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("ca947428-075a-4d63-a707-f44da0cbe871")) {                    Plotly.newPlot(                        "ca947428-075a-4d63-a707-f44da0cbe871",                        [{"customdata":{"dtype":"i1","bdata":"KAcA","shape":"3, 1"},"hovertemplate":"Age Group=%{x}\u003cbr\u003eAverage Annual Income=%{y:.2f}\u003cbr\u003eCustomer_Count=%{customdata[0]}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","pattern":{"shape":""}},"name":"","orientation":"v","showlegend":false,"textposition":"auto","x":["Youth (\u003c=35)","Middle-aged (36-45)","Older (\u003e45)"],"xaxis":"x","y":{"dtype":"f8","bdata":"ZmZmZmZ2SUDbtm3btq1QQAAAAAAAAPh\u002f"},"yaxis":"y","type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Age Group"},"categoryorder":"array","categoryarray":["Youth (\u003c=35)","Middle-aged (36-45)","Older (\u003e45)"]},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Average Annual Income"}},"legend":{"tracegroupgap":0},"title":{"text":"Cluster 3: Average Annual Income by Age Group"},"barmode":"relative"},                        {"responsive": true}                    )                };            </script>        </div><div>                            <div id="9189e0d4-3f62-4c91-bc7e-d23fe005852b" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("9189e0d4-3f62-4c91-bc7e-d23fe005852b")) {                    Plotly.newPlot(                        "9189e0d4-3f62-4c91-bc7e-d23fe005852b",                        [{"customdata":{"dtype":"i1","bdata":"KAcA","shape":"3, 1"},"hovertemplate":"Age Group=%{x}\u003cbr\u003eAverage Spending Score=%{y:.2f}\u003cbr\u003eCustomer_Count=%{customdata[0]}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","pattern":{"shape":""}},"name":"","orientation":"v","showlegend":false,"textposition":"auto","x":["Youth (\u003c=35)","Middle-aged (36-45)","Older (\u003e45)"],"xaxis":"x","y":{"dtype":"f8","bdata":"mpmZmZnZSEAAAAAAAABHQAAAAAAAAPh\u002f"},"yaxis":"y","type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Age Group"},"categoryorder":"array","categoryarray":["Youth (\u003c=35)","Middle-aged (36-45)","Older (\u003e45)"]},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Average Spending Score"}},"legend":{"tracegroupgap":0},"title":{"text":"Cluster 3: Average Spending Score by Age Group"},"barmode":"relative"},                        {"responsive": true}                    )                };            </script>        </div>
+    <section><h2>Cluster 0 (48 customers)</h2><table border="1" class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>CustomerId</th>
+      <th>Age</th>
+      <th>Annual_Income</th>
+      <th>Spending_Score</th>
+      <th>cluster</th>
+      <th>Age Group</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>41</td>
+      <td>65</td>
+      <td>38</td>
+      <td>35</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>43</td>
+      <td>48</td>
+      <td>39</td>
+      <td>36</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>47</td>
+      <td>50</td>
+      <td>40</td>
+      <td>55</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>51</td>
+      <td>49</td>
+      <td>42</td>
+      <td>52</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>54</td>
+      <td>59</td>
+      <td>43</td>
+      <td>60</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>55</td>
+      <td>50</td>
+      <td>43</td>
+      <td>45</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>56</td>
+      <td>47</td>
+      <td>43</td>
+      <td>41</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>57</td>
+      <td>51</td>
+      <td>44</td>
+      <td>50</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>58</td>
+      <td>69</td>
+      <td>44</td>
+      <td>46</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>60</td>
+      <td>53</td>
+      <td>46</td>
+      <td>46</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>61</td>
+      <td>70</td>
+      <td>46</td>
+      <td>56</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>63</td>
+      <td>67</td>
+      <td>47</td>
+      <td>52</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>64</td>
+      <td>54</td>
+      <td>47</td>
+      <td>59</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>65</td>
+      <td>63</td>
+      <td>48</td>
+      <td>51</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>67</td>
+      <td>43</td>
+      <td>48</td>
+      <td>50</td>
+      <td>0</td>
+      <td>Middle-aged (36-45)</td>
+    </tr>
+    <tr>
+      <td>68</td>
+      <td>68</td>
+      <td>48</td>
+      <td>48</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>71</td>
+      <td>70</td>
+      <td>49</td>
+      <td>55</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>72</td>
+      <td>47</td>
+      <td>49</td>
+      <td>42</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>73</td>
+      <td>60</td>
+      <td>50</td>
+      <td>49</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>74</td>
+      <td>60</td>
+      <td>50</td>
+      <td>56</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>75</td>
+      <td>59</td>
+      <td>54</td>
+      <td>47</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>77</td>
+      <td>45</td>
+      <td>54</td>
+      <td>53</td>
+      <td>0</td>
+      <td>Middle-aged (36-45)</td>
+    </tr>
+    <tr>
+      <td>80</td>
+      <td>49</td>
+      <td>54</td>
+      <td>42</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>81</td>
+      <td>57</td>
+      <td>54</td>
+      <td>51</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>83</td>
+      <td>67</td>
+      <td>54</td>
+      <td>41</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>84</td>
+      <td>46</td>
+      <td>54</td>
+      <td>44</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>86</td>
+      <td>48</td>
+      <td>54</td>
+      <td>46</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>87</td>
+      <td>55</td>
+      <td>57</td>
+      <td>58</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>90</td>
+      <td>50</td>
+      <td>58</td>
+      <td>46</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>91</td>
+      <td>68</td>
+      <td>59</td>
+      <td>55</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>93</td>
+      <td>48</td>
+      <td>60</td>
+      <td>49</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>97</td>
+      <td>47</td>
+      <td>60</td>
+      <td>47</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>99</td>
+      <td>48</td>
+      <td>61</td>
+      <td>42</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>102</td>
+      <td>49</td>
+      <td>62</td>
+      <td>48</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>103</td>
+      <td>67</td>
+      <td>62</td>
+      <td>59</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>105</td>
+      <td>49</td>
+      <td>62</td>
+      <td>56</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>107</td>
+      <td>66</td>
+      <td>63</td>
+      <td>50</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>108</td>
+      <td>54</td>
+      <td>63</td>
+      <td>46</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>109</td>
+      <td>68</td>
+      <td>63</td>
+      <td>43</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>110</td>
+      <td>66</td>
+      <td>63</td>
+      <td>48</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>111</td>
+      <td>65</td>
+      <td>63</td>
+      <td>52</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>117</td>
+      <td>63</td>
+      <td>65</td>
+      <td>43</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>118</td>
+      <td>49</td>
+      <td>65</td>
+      <td>59</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>119</td>
+      <td>51</td>
+      <td>67</td>
+      <td>43</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>120</td>
+      <td>50</td>
+      <td>67</td>
+      <td>57</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>127</td>
+      <td>43</td>
+      <td>71</td>
+      <td>35</td>
+      <td>0</td>
+      <td>Middle-aged (36-45)</td>
+    </tr>
+    <tr>
+      <td>147</td>
+      <td>48</td>
+      <td>77</td>
+      <td>36</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>161</td>
+      <td>56</td>
+      <td>79</td>
+      <td>35</td>
+      <td>0</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+  </tbody>
+</table></section><section><h2>Cluster 1 (57 customers)</h2><table border="1" class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>CustomerId</th>
+      <th>Age</th>
+      <th>Annual_Income</th>
+      <th>Spending_Score</th>
+      <th>cluster</th>
+      <th>Age Group</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2</td>
+      <td>21</td>
+      <td>15</td>
+      <td>81</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>23</td>
+      <td>16</td>
+      <td>77</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>22</td>
+      <td>17</td>
+      <td>76</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>23</td>
+      <td>18</td>
+      <td>94</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>30</td>
+      <td>19</td>
+      <td>72</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>35</td>
+      <td>19</td>
+      <td>99</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>24</td>
+      <td>20</td>
+      <td>77</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>22</td>
+      <td>20</td>
+      <td>79</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>35</td>
+      <td>23</td>
+      <td>98</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>25</td>
+      <td>24</td>
+      <td>73</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>31</td>
+      <td>25</td>
+      <td>73</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td>29</td>
+      <td>28</td>
+      <td>82</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td>23</td>
+      <td>29</td>
+      <td>87</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>32</td>
+      <td>21</td>
+      <td>30</td>
+      <td>73</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>34</td>
+      <td>18</td>
+      <td>33</td>
+      <td>92</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>36</td>
+      <td>21</td>
+      <td>33</td>
+      <td>81</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>38</td>
+      <td>30</td>
+      <td>34</td>
+      <td>73</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>40</td>
+      <td>20</td>
+      <td>37</td>
+      <td>75</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>42</td>
+      <td>24</td>
+      <td>38</td>
+      <td>92</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>124</td>
+      <td>39</td>
+      <td>69</td>
+      <td>91</td>
+      <td>1</td>
+      <td>Middle-aged (36-45)</td>
+    </tr>
+    <tr>
+      <td>126</td>
+      <td>31</td>
+      <td>70</td>
+      <td>77</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>128</td>
+      <td>40</td>
+      <td>71</td>
+      <td>95</td>
+      <td>1</td>
+      <td>Middle-aged (36-45)</td>
+    </tr>
+    <tr>
+      <td>130</td>
+      <td>38</td>
+      <td>71</td>
+      <td>75</td>
+      <td>1</td>
+      <td>Middle-aged (36-45)</td>
+    </tr>
+    <tr>
+      <td>132</td>
+      <td>39</td>
+      <td>71</td>
+      <td>75</td>
+      <td>1</td>
+      <td>Middle-aged (36-45)</td>
+    </tr>
+    <tr>
+      <td>134</td>
+      <td>31</td>
+      <td>72</td>
+      <td>71</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>136</td>
+      <td>29</td>
+      <td>73</td>
+      <td>88</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>138</td>
+      <td>32</td>
+      <td>73</td>
+      <td>73</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>140</td>
+      <td>35</td>
+      <td>74</td>
+      <td>72</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>142</td>
+      <td>32</td>
+      <td>75</td>
+      <td>93</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>144</td>
+      <td>32</td>
+      <td>76</td>
+      <td>87</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>146</td>
+      <td>28</td>
+      <td>77</td>
+      <td>97</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>148</td>
+      <td>32</td>
+      <td>77</td>
+      <td>74</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>150</td>
+      <td>34</td>
+      <td>78</td>
+      <td>90</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>152</td>
+      <td>39</td>
+      <td>78</td>
+      <td>88</td>
+      <td>1</td>
+      <td>Middle-aged (36-45)</td>
+    </tr>
+    <tr>
+      <td>154</td>
+      <td>38</td>
+      <td>78</td>
+      <td>76</td>
+      <td>1</td>
+      <td>Middle-aged (36-45)</td>
+    </tr>
+    <tr>
+      <td>156</td>
+      <td>27</td>
+      <td>78</td>
+      <td>89</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>158</td>
+      <td>30</td>
+      <td>78</td>
+      <td>78</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>160</td>
+      <td>30</td>
+      <td>78</td>
+      <td>73</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>162</td>
+      <td>29</td>
+      <td>79</td>
+      <td>83</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>164</td>
+      <td>31</td>
+      <td>81</td>
+      <td>93</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>166</td>
+      <td>36</td>
+      <td>85</td>
+      <td>75</td>
+      <td>1</td>
+      <td>Middle-aged (36-45)</td>
+    </tr>
+    <tr>
+      <td>168</td>
+      <td>33</td>
+      <td>86</td>
+      <td>95</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>172</td>
+      <td>28</td>
+      <td>87</td>
+      <td>75</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>174</td>
+      <td>36</td>
+      <td>87</td>
+      <td>92</td>
+      <td>1</td>
+      <td>Middle-aged (36-45)</td>
+    </tr>
+    <tr>
+      <td>176</td>
+      <td>30</td>
+      <td>88</td>
+      <td>86</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>178</td>
+      <td>27</td>
+      <td>88</td>
+      <td>69</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>180</td>
+      <td>35</td>
+      <td>93</td>
+      <td>90</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>182</td>
+      <td>32</td>
+      <td>97</td>
+      <td>86</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>184</td>
+      <td>29</td>
+      <td>98</td>
+      <td>88</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>186</td>
+      <td>30</td>
+      <td>99</td>
+      <td>97</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>188</td>
+      <td>28</td>
+      <td>101</td>
+      <td>68</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>190</td>
+      <td>36</td>
+      <td>103</td>
+      <td>85</td>
+      <td>1</td>
+      <td>Middle-aged (36-45)</td>
+    </tr>
+    <tr>
+      <td>192</td>
+      <td>32</td>
+      <td>103</td>
+      <td>69</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>194</td>
+      <td>38</td>
+      <td>113</td>
+      <td>91</td>
+      <td>1</td>
+      <td>Middle-aged (36-45)</td>
+    </tr>
+    <tr>
+      <td>196</td>
+      <td>35</td>
+      <td>120</td>
+      <td>79</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>198</td>
+      <td>32</td>
+      <td>126</td>
+      <td>74</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>200</td>
+      <td>30</td>
+      <td>137</td>
+      <td>83</td>
+      <td>1</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+  </tbody>
+</table></section><section><h2>Cluster 2 (48 customers)</h2><table border="1" class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>CustomerId</th>
+      <th>Age</th>
+      <th>Annual_Income</th>
+      <th>Spending_Score</th>
+      <th>cluster</th>
+      <th>Age Group</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>3</td>
+      <td>20</td>
+      <td>16</td>
+      <td>6</td>
+      <td>2</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>35</td>
+      <td>18</td>
+      <td>6</td>
+      <td>2</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>64</td>
+      <td>19</td>
+      <td>3</td>
+      <td>2</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>67</td>
+      <td>19</td>
+      <td>14</td>
+      <td>2</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>58</td>
+      <td>20</td>
+      <td>15</td>
+      <td>2</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>37</td>
+      <td>20</td>
+      <td>13</td>
+      <td>2</td>
+      <td>Middle-aged (36-45)</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>52</td>
+      <td>23</td>
+      <td>29</td>
+      <td>2</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td>46</td>
+      <td>25</td>
+      <td>5</td>
+      <td>2</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>54</td>
+      <td>28</td>
+      <td>14</td>
+      <td>2</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td>45</td>
+      <td>28</td>
+      <td>32</td>
+      <td>2</td>
+      <td>Middle-aged (36-45)</td>
+    </tr>
+    <tr>
+      <td>29</td>
+      <td>40</td>
+      <td>29</td>
+      <td>31</td>
+      <td>2</td>
+      <td>Middle-aged (36-45)</td>
+    </tr>
+    <tr>
+      <td>31</td>
+      <td>60</td>
+      <td>30</td>
+      <td>4</td>
+      <td>2</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>33</td>
+      <td>53</td>
+      <td>33</td>
+      <td>4</td>
+      <td>2</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>35</td>
+      <td>49</td>
+      <td>33</td>
+      <td>14</td>
+      <td>2</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>37</td>
+      <td>42</td>
+      <td>34</td>
+      <td>17</td>
+      <td>2</td>
+      <td>Middle-aged (36-45)</td>
+    </tr>
+    <tr>
+      <td>39</td>
+      <td>36</td>
+      <td>37</td>
+      <td>26</td>
+      <td>2</td>
+      <td>Middle-aged (36-45)</td>
+    </tr>
+    <tr>
+      <td>45</td>
+      <td>49</td>
+      <td>39</td>
+      <td>28</td>
+      <td>2</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>129</td>
+      <td>59</td>
+      <td>71</td>
+      <td>11</td>
+      <td>2</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>131</td>
+      <td>47</td>
+      <td>71</td>
+      <td>9</td>
+      <td>2</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>135</td>
+      <td>20</td>
+      <td>73</td>
+      <td>5</td>
+      <td>2</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>137</td>
+      <td>44</td>
+      <td>73</td>
+      <td>7</td>
+      <td>2</td>
+      <td>Middle-aged (36-45)</td>
+    </tr>
+    <tr>
+      <td>139</td>
+      <td>19</td>
+      <td>74</td>
+      <td>10</td>
+      <td>2</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>141</td>
+      <td>57</td>
+      <td>75</td>
+      <td>5</td>
+      <td>2</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>145</td>
+      <td>25</td>
+      <td>77</td>
+      <td>12</td>
+      <td>2</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>149</td>
+      <td>34</td>
+      <td>78</td>
+      <td>22</td>
+      <td>2</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>151</td>
+      <td>43</td>
+      <td>78</td>
+      <td>17</td>
+      <td>2</td>
+      <td>Middle-aged (36-45)</td>
+    </tr>
+    <tr>
+      <td>153</td>
+      <td>44</td>
+      <td>78</td>
+      <td>20</td>
+      <td>2</td>
+      <td>Middle-aged (36-45)</td>
+    </tr>
+    <tr>
+      <td>155</td>
+      <td>47</td>
+      <td>78</td>
+      <td>16</td>
+      <td>2</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>157</td>
+      <td>37</td>
+      <td>78</td>
+      <td>1</td>
+      <td>2</td>
+      <td>Middle-aged (36-45)</td>
+    </tr>
+    <tr>
+      <td>159</td>
+      <td>34</td>
+      <td>78</td>
+      <td>1</td>
+      <td>2</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>163</td>
+      <td>19</td>
+      <td>81</td>
+      <td>5</td>
+      <td>2</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>165</td>
+      <td>50</td>
+      <td>85</td>
+      <td>26</td>
+      <td>2</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>167</td>
+      <td>42</td>
+      <td>86</td>
+      <td>20</td>
+      <td>2</td>
+      <td>Middle-aged (36-45)</td>
+    </tr>
+    <tr>
+      <td>169</td>
+      <td>36</td>
+      <td>87</td>
+      <td>27</td>
+      <td>2</td>
+      <td>Middle-aged (36-45)</td>
+    </tr>
+    <tr>
+      <td>171</td>
+      <td>40</td>
+      <td>87</td>
+      <td>13</td>
+      <td>2</td>
+      <td>Middle-aged (36-45)</td>
+    </tr>
+    <tr>
+      <td>173</td>
+      <td>36</td>
+      <td>87</td>
+      <td>10</td>
+      <td>2</td>
+      <td>Middle-aged (36-45)</td>
+    </tr>
+    <tr>
+      <td>175</td>
+      <td>52</td>
+      <td>88</td>
+      <td>13</td>
+      <td>2</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>177</td>
+      <td>58</td>
+      <td>88</td>
+      <td>15</td>
+      <td>2</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>179</td>
+      <td>59</td>
+      <td>93</td>
+      <td>14</td>
+      <td>2</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>181</td>
+      <td>37</td>
+      <td>97</td>
+      <td>32</td>
+      <td>2</td>
+      <td>Middle-aged (36-45)</td>
+    </tr>
+    <tr>
+      <td>183</td>
+      <td>46</td>
+      <td>98</td>
+      <td>15</td>
+      <td>2</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>187</td>
+      <td>54</td>
+      <td>101</td>
+      <td>24</td>
+      <td>2</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>189</td>
+      <td>41</td>
+      <td>103</td>
+      <td>17</td>
+      <td>2</td>
+      <td>Middle-aged (36-45)</td>
+    </tr>
+    <tr>
+      <td>191</td>
+      <td>34</td>
+      <td>103</td>
+      <td>23</td>
+      <td>2</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>193</td>
+      <td>33</td>
+      <td>113</td>
+      <td>8</td>
+      <td>2</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>195</td>
+      <td>47</td>
+      <td>120</td>
+      <td>16</td>
+      <td>2</td>
+      <td>Older (&gt;45)</td>
+    </tr>
+    <tr>
+      <td>197</td>
+      <td>45</td>
+      <td>126</td>
+      <td>28</td>
+      <td>2</td>
+      <td>Middle-aged (36-45)</td>
+    </tr>
+    <tr>
+      <td>199</td>
+      <td>32</td>
+      <td>137</td>
+      <td>18</td>
+      <td>2</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+  </tbody>
+</table></section><section><h2>Cluster 3 (47 customers)</h2><table border="1" class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>CustomerId</th>
+      <th>Age</th>
+      <th>Annual_Income</th>
+      <th>Spending_Score</th>
+      <th>cluster</th>
+      <th>Age Group</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>19</td>
+      <td>15</td>
+      <td>39</td>
+      <td>3</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>31</td>
+      <td>17</td>
+      <td>40</td>
+      <td>3</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>35</td>
+      <td>21</td>
+      <td>35</td>
+      <td>3</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>20</td>
+      <td>21</td>
+      <td>66</td>
+      <td>3</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>35</td>
+      <td>24</td>
+      <td>35</td>
+      <td>3</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td>35</td>
+      <td>28</td>
+      <td>61</td>
+      <td>3</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>44</td>
+      <td>31</td>
+      <td>39</td>
+      <td>61</td>
+      <td>3</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>46</td>
+      <td>24</td>
+      <td>39</td>
+      <td>65</td>
+      <td>3</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>48</td>
+      <td>27</td>
+      <td>40</td>
+      <td>47</td>
+      <td>3</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>49</td>
+      <td>29</td>
+      <td>40</td>
+      <td>42</td>
+      <td>3</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>50</td>
+      <td>31</td>
+      <td>40</td>
+      <td>42</td>
+      <td>3</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>52</td>
+      <td>33</td>
+      <td>42</td>
+      <td>60</td>
+      <td>3</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>53</td>
+      <td>31</td>
+      <td>43</td>
+      <td>54</td>
+      <td>3</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>59</td>
+      <td>27</td>
+      <td>46</td>
+      <td>51</td>
+      <td>3</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>62</td>
+      <td>19</td>
+      <td>46</td>
+      <td>55</td>
+      <td>3</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>66</td>
+      <td>18</td>
+      <td>48</td>
+      <td>59</td>
+      <td>3</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>69</td>
+      <td>19</td>
+      <td>48</td>
+      <td>59</td>
+      <td>3</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>70</td>
+      <td>32</td>
+      <td>48</td>
+      <td>47</td>
+      <td>3</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>76</td>
+      <td>26</td>
+      <td>54</td>
+      <td>54</td>
+      <td>3</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>78</td>
+      <td>40</td>
+      <td>54</td>
+      <td>48</td>
+      <td>3</td>
+      <td>Middle-aged (36-45)</td>
+    </tr>
+    <tr>
+      <td>79</td>
+      <td>23</td>
+      <td>54</td>
+      <td>52</td>
+      <td>3</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>82</td>
+      <td>38</td>
+      <td>54</td>
+      <td>55</td>
+      <td>3</td>
+      <td>Middle-aged (36-45)</td>
+    </tr>
+    <tr>
+      <td>85</td>
+      <td>21</td>
+      <td>54</td>
+      <td>57</td>
+      <td>3</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>88</td>
+      <td>22</td>
+      <td>57</td>
+      <td>55</td>
+      <td>3</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>89</td>
+      <td>34</td>
+      <td>58</td>
+      <td>60</td>
+      <td>3</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>92</td>
+      <td>18</td>
+      <td>59</td>
+      <td>41</td>
+      <td>3</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>94</td>
+      <td>40</td>
+      <td>60</td>
+      <td>40</td>
+      <td>3</td>
+      <td>Middle-aged (36-45)</td>
+    </tr>
+    <tr>
+      <td>95</td>
+      <td>32</td>
+      <td>60</td>
+      <td>42</td>
+      <td>3</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>96</td>
+      <td>24</td>
+      <td>60</td>
+      <td>52</td>
+      <td>3</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>98</td>
+      <td>27</td>
+      <td>60</td>
+      <td>50</td>
+      <td>3</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>100</td>
+      <td>20</td>
+      <td>61</td>
+      <td>49</td>
+      <td>3</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>101</td>
+      <td>23</td>
+      <td>62</td>
+      <td>41</td>
+      <td>3</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>104</td>
+      <td>26</td>
+      <td>62</td>
+      <td>55</td>
+      <td>3</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>106</td>
+      <td>21</td>
+      <td>62</td>
+      <td>42</td>
+      <td>3</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>112</td>
+      <td>19</td>
+      <td>63</td>
+      <td>54</td>
+      <td>3</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>113</td>
+      <td>38</td>
+      <td>64</td>
+      <td>42</td>
+      <td>3</td>
+      <td>Middle-aged (36-45)</td>
+    </tr>
+    <tr>
+      <td>114</td>
+      <td>19</td>
+      <td>64</td>
+      <td>46</td>
+      <td>3</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>115</td>
+      <td>18</td>
+      <td>65</td>
+      <td>48</td>
+      <td>3</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>116</td>
+      <td>19</td>
+      <td>65</td>
+      <td>50</td>
+      <td>3</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>121</td>
+      <td>27</td>
+      <td>67</td>
+      <td>56</td>
+      <td>3</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>122</td>
+      <td>38</td>
+      <td>67</td>
+      <td>40</td>
+      <td>3</td>
+      <td>Middle-aged (36-45)</td>
+    </tr>
+    <tr>
+      <td>123</td>
+      <td>40</td>
+      <td>69</td>
+      <td>58</td>
+      <td>3</td>
+      <td>Middle-aged (36-45)</td>
+    </tr>
+    <tr>
+      <td>125</td>
+      <td>23</td>
+      <td>70</td>
+      <td>29</td>
+      <td>3</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>133</td>
+      <td>25</td>
+      <td>72</td>
+      <td>34</td>
+      <td>3</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>143</td>
+      <td>28</td>
+      <td>76</td>
+      <td>40</td>
+      <td>3</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>170</td>
+      <td>32</td>
+      <td>87</td>
+      <td>63</td>
+      <td>3</td>
+      <td>Youth (&lt;=35)</td>
+    </tr>
+    <tr>
+      <td>185</td>
+      <td>41</td>
+      <td>99</td>
+      <td>39</td>
+      <td>3</td>
+      <td>Middle-aged (36-45)</td>
+    </tr>
+  </tbody>
+</table></section>
+</body>
+</html>
